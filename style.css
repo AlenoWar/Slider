@@ -48,6 +48,7 @@ body {
 .slide-img {
     width: 13%;
     float: left;
+    margin-left: 13%;
 }
 
 .slide-txt {
@@ -77,9 +78,8 @@ body {
 
 #prev-btn, #next-btn {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: #ccc;
+    width: 70px;
+    height: 70px;
     top: calc(50% - 25px);
 }
 
@@ -91,6 +91,26 @@ body {
     left: 20px;
 }
 
+#prev-btn::before {
+    content: " ";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    transform: rotate(-45deg);
+    border-left: 3px solid #3d3d3d;
+    border-top: 3px solid #3d3d3d;
+}
+
 #next-btn {
     right: 20px;
+}
+
+#next-btn::before {
+    content: " ";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    transform: rotate(-45deg);
+    border-right: 3px solid #3d3d3d;
+    border-bottom: 3px solid #3d3d3d;
 }
